@@ -1,27 +1,28 @@
 # pitch-perfect
 
-**Communications Plan**
+**Communications & Operations Plan**
 
 **********************************************************************************************************************************************************************************************
 
 **General Meeting Etiquettes**
 
 1. Raised Hands Policy
-2. Short, Succint discussion points
-3. Keep it in S.M.A.R.T Format
-4. Think about the issue raised
-5. Formulate the communication/alternatively write it out beforehand
-6. 1800hrs Daily: Submit all issues for discussion on standup by 1800hrs the day before the standup
-7. 0900 Hrs daily: H/O PM to prepare the Standup Agenda + H/O ready for the TA and incoming PM to review. 
+2. Absence Policy: Emergencies only
+3. Short, Succinct discussion points
+4. Think about the issue raised, and schedule a meeting to discuss business case viability with PM 
+5. Once approved, formulate the idea and submit it on the Pitch Perfect Slack channel
+6. Keep it in S.M.A.R.T Format but more importantly keep it simple
+7. 1800hrs Daily: Submit all issues to be raised on standup by 1800hrs the day before to the Slack Channel to aid the Standup Agenda Prep
+8. 0900 Hrs daily: H/O PM to prepare the Standup Agenda + H/O ready for the TA and incoming PM to review 
 
 **********************************************************************************************************************************************************************************************
 
 **Daily Standups**
 
-1. Standup meetings are held a the beginning of each day with a TA.
-2. The whole team and assigned TA should take part.
-3. Notes of the meeting should be recorded clearly in the project Slack channel.
-4. Ensure Kanban Board is up to date
+1. Standup meetings are held at the beginning of each day with a TA
+2. The whole team and assigned TA should take part
+3. Notes of the meeting should be recorded clearly in the project Slack channel
+4. Ensure the Kanban Board is up to date
 5. Get the latest version of your master to discuss the current state of your app
 6. Notify TA when Ready - ** ETA 15-20 Mins post Daily Lectures / NLT 30mins **
 
@@ -40,18 +41,23 @@
 
 **********************************************************************************************************************************************************************************************
 
-** Project Rota / Issue Progression / Approvals Plan **
+**Project Rota / Issue Progression / Approvals Plan**
 
 ![image](https://github.com/user-attachments/assets/7000fa26-4f8b-4c51-8b9f-a954afda89b4)
 
+**********************************************************************************************************************************************************************************************
+
 ### **MISSION STATEMENT** 
-***************************************************************************************************************************
+
+**********************************************************************************************************************************************************************************************
 
 Deliver a lasting and growing legacy for and on behalf of the Le Wagon Community. 
 
-***************************************************************************************************************************
+**********************************************************************************************************************************************************************************************
+
 ### **VISION**
-***************************************************************************************************************************
+
+**********************************************************************************************************************************************************************************************
 
 Pitch Perfect vision is to be an open-source platform that will ultimately enable every Le Wagon student to find a safe space to contribute and practice their skills during and post Bootcamp with peer support from the alumni community. 
 
@@ -59,17 +65,17 @@ If successful it is hoped it could provide a platform for them to actively contr
 
 It is **not** intended to be a finished product but one that is left to the community to utilize and grow.
 
-***************************************************************************************************************************
-** PLEASE NOTE: The below instructions are mandatory for the duration of the project. Any delays will result in Critical Path Delays.**
-***************************************************************************************************************************
+**********************************************************************************************************************************************************************************************
+** PLEASE NOTE: The below instructions are mandatory for the duration of the project. Any delays will result in Critical Path Delays. **
+**********************************************************************************************************************************************************************************************
 
-### **Batch 1900 TEAM PITCH PERFECT PROJECT: S.M.A.R.T GOAL** 
+### **Batch 1900 Team PITCH PERFECT - S.M.A.R.T GOAL** 
 
-***************************************************************************************************************************
+**********************************************************************************************************************************************************************************************
 
-1. Specific: Minimum Viable Product as per scope. 
+1. Specific: Deliver a Minimum Viable Product as per scope. 
 
-2. Measurable: Users must be able to achieve the desired objective. 
+2. Measurable: Users must be able to achieve the desired objectives identified. 
 
 3. Achievable: Yes - Timeframes, TA Support, Team Skills, Knowledge, and Experience make it feasible. No major concerns were noted. 
 
@@ -77,13 +83,57 @@ It is **not** intended to be a finished product but one that is left to the comm
 
 5. Timeframe: 2 Weeks
 
-***************************************************************************************************************************
+**********************************************************************************************************************************************************************************************
 
-### **REMEMBER: The purpose of the projects is for everyone to learn.** 
+### **REMEMBER: The purpose of the projects is for everyone to learn. Teamwork Makes the Dream Work. Embrace Failure, for it is the stepping stone to success.** 
 
-***************************************************************************************************************************
+**********************************************************************************************************************************************************************************************
+
+**How to Branch - Feature Branching**
+
+**********************************************************************************************************************************************************************************************
+
+1. Each branch is one feature or part of one feature. Ideally, you should not be working on the same branch for more than a day. 
+2. If the backend and basic front end are done, push it and then create a new branch to finish beautifying the view. 
+3. Your branch should have a clear, descriptive name, like restaurants-show or dashboard-page-front-end or animated-menu-items.
+
+**NOTE: This also means we never code on master**
+
+1. If you realize you’ve accidentally been coding on Master, don’t fret! 
+2. Just move into an existing branch or create a new one, and the uncommitted changes will be brought along with you. 
+3. You can review the git flow here.
+4. If for some reason you’re having issues moving into a new branch, please open a ticket.
+
+It’s normal to have merge conflicts every now and then, minimize the risk by pushing and merging on a regular basis!
+
+**********************************************************************************************************************************************************************************************
+
+**Continuous Deployment**
+
+**********************************************************************************************************************************************************************************************
+
+Once you think you’ve finished your feature, the process should be:
+
+Push your branch - ask one team member to review
+Merge into master - if your code is approved by the team
+Communicate to the team that the master was updated - so they can pull the latest version
+Deploy to Heroku - crash test / debug
+Update the Kanban board
+
+Production Best Practice
+
+1. Every time a PR gets merged into the master, the master branch should then be pushed to production
+2. This prevents technical debt from stacking up
+3. Helps find any bugs right away - you’ll know that they came from the most recent code that was pushed
+4. This makes it much easier to find the source and to debug
+5. The code is in the hands of the user quicker
+6. This also means that you’ll receive any user feedback sooner
+
+**********************************************************************************************************************************************************************************************
 
 **MANDATORY INSTRUCTIONS PLEASE**
+
+**********************************************************************************************************************************************************************************************
 
 1. Follow the instructions
 2. Refer to Read Me page
@@ -104,3 +154,4 @@ It is **not** intended to be a finished product but one that is left to the comm
 17. **If In Doubt** ask the **Task/Role Lead**
 18. When tasks are completed progress the status of issues to close out
 19. Finally, focus on time management and seek help early
+
