@@ -6,9 +6,9 @@
 
 **Shared Values**
 
-1. Respect      :  For Peers And Teachers
+1. Respect      :  For Peers, Teachers & Self
 2. Integrity    :  Do The Right Thing, Even When No One Is Watching
-3. Loyalty      :  To Team & Team Members - It Reflects On You
+3. Loyalty      :  To Project Mission & Team Members - It Reflects On You
 4. Commitment   :  Give Your Best
 5. Empower      :  Help Each Other to Learn, Grow & Develop
 
@@ -34,19 +34,19 @@
 **Daily Standups**
 
 1. Standup meetings are held at the beginning of each day with a TA
-2. The whole team and assigned TA should take part
-3. Notes of the meeting should be recorded clearly in the project Slack channel
-4. Ensure the Kanban Board is up to date
-5. Get the latest version of your master to discuss the current state of your app
+2. The whole team and assigned TA must take part
+3. Task Reports completed beforehand
+4. Departing PM to ensure the Kanban Board is up to date
+5. Get the latest version of Master to discuss the current state of your app
 6. Notify TA when Ready - ** ETA 15-20 Mins post Daily Lectures / NLT 30mins **
 
 **********************************************************************************************************************************************************************************************
 
-**Standup Instructions**
+**Standup Instructions - PM of THE DAY**
 
-** Project Lead / Daily Lead to be prepared to brief TA on Daily Plan **
+** Brief TA on Daily Plan **
 
-1. Share their screen with the Kanban board & App opened
+1. Share your screen with the Kanban board & App opened
 2. Previous day’s recap: round table with everyone’s actual completed tasks
 3. Today’s program: round table for which features/page you will work on today
 4. Address every technical concern or difficulty - ** List of Technical issues to be collated the day before **
