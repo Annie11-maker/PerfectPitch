@@ -1,0 +1,36 @@
+
+
+
+Feature example: Book a flat
+
+When you work on a feature, work on it conscientiously from the database to the HTML/CSS. Let’s take the example of the “booking” feature:
+
+Model
+
+I will create a Booking model and its associated migration.
+Then I will write a working model with associations and validations.
+I will then crash-test my model from the rails console to make sure everything in the model works.
+Routing:
+
+I will add bookings routes in routes.rb
+Controller:
+
+I will create a new BookingsController with the create and index actions.
+I will implement these two actions.
+Views modification:
+
+I will embed the booking form in the existing views/flats/show.html.erb
+I will list all current user’s bookings on a new page views/bookings/index.html.erb.
+Links:
+
+I will add a link to the bookings#indexpage in the navbar.
+HTML/CSS:
+
+My booking form is clean with the correct Bootstrap classes for the inputs and buttons.
+My new bookings page is clean with a container to center the content, clear headers, and a clean design for each booking.
+I will take time to refactor my HTML using partials if my HTML code is too long and hard to read.
+Code it perfectly, from model to view
+
+Crash test all your model associations and validations in the rails console.
+Don’t neglect the view. If you add a form, make it a nice, centered and responsive Bootstrap form. If you code a flats list, build a nice Bootstrap grid (for example, with flat picture on the left and flat info on the right..).
+Use partials to refactor your HTML and make it more readable and maintainable.
