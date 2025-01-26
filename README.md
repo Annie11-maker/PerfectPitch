@@ -132,7 +132,7 @@ It is **not** intended to be a finished product but one that is left to the comm
 3. You can review the git flow here.
 4. If for some reason you’re having issues moving into a new branch, please open a ticket.
 
-It’s normal to have merge conflicts every now and then, minimize the risk by pushing and merging on a regular basis!
+**NOTE: It’s normal to have merge conflicts now and then, minimize the risk by pushing and merging regularly!**
 
 **********************************************************************************************************************************************************************************************
 
@@ -164,28 +164,35 @@ Production Best Practice
 **********************************************************************************************************************************************************************************************
 
 01. Follow the instructions
-02. Refer to Read Me page
-03. Follow the Communication Plan 
-04. Figma & Design Led Development can make a world of a difference in our team’s result 
-05. Know exactly what each feature should look like
-06. Maintain a consistent design pattern
-07. Familiarise yourself with the information & resources
-08. Stick to the agreed plan and keep the project mission, goals and objective in mind
-09. Update the Slack channel with progress as soon as you complete the activity
-10. Familiarise yourself with the working process flow 
-11. Understand the objectives, features, and dependencies
-12. Take some time to review the mockup and think about the functionality and routes
-13. Be proactive in identifying blockers and highlight them immediately
-14. Pair Programming will be adopted as allocated for specific issues
-15. At some point, Be prepared to handle and take sole responsibility for tasks/issues 
-16. The instructions are provided to help you navigate through these seamlessly
-17. Handover must be prepared by Off Going Role Holder
-18. Handover must be completed before Daily Standup
-19. In Coming Role Holder to brief TA
-20. Out Going Role Holder to maintain contingency responsibility
-21. Communicate any absences in advance / before 0900 hrs daily in the Slack channel
-22. Please respect Teachers by attending all Lectures on Camera 
-23. **If In Doubt** ask the **Task/Role Lead**
-24. When tasks are completed progress the status of issues to close out
-25. Finally, focus on time management and seek help early
+02. Adhere to the Values
+03. Stick to the working hours 9 am - 6 pm
+04. Overtime must be approved by PM with justification in the Slack channel
+05. Refer to Read Me page, Work Schedules, Programme & Process Flow
+06. Follow the Communication Plan 
+07. Figma & Design Led Development can make a world of a difference in our team’s result 
+08. Know exactly what each feature should look like
+09. Maintain a consistent design pattern
+10. Familiarise yourself with the information & resources
+11. Stick to the agreed plan and keep the project mission, goals and objective in mind
+12. Update the Slack channel with progress as soon as you complete the activity
+13. Familiarise yourself with the working process flow 
+14. Understand the objectives, features, and dependencies
+15. Take some time to review the mockup and think about the functionality and routes
+16. Be proactive in identifying blockers and highlight them immediately
+17. Pair Programming will be adopted as allocated for specific issues
+18. At some point, Be prepared to handle and take sole responsibility for tasks/issues 
+19. The instructions are provided to help you navigate through these seamlessly
+20. Handover must be prepared by Off Going Role Holder
+21. Handover must be completed before Daily Standup
+22. In Coming Role Holder to brief TA on the Daily Standup
+23. Departing Role Holder to maintain contingency responsibility
+24. Communicate any absences in advance / before 0900 hrs daily in the Slack channel
+25. Please respect Teachers by attending all Lectures and being visibly present on Camera
+26. Please respect all Peers by attending and encouraging their presentations visibly on camera
+27. Please do not code during lectures/presentations
+28. Enjoy the experience of the Bootcamp
+29. **If In Doubt** ask the **Task/Role Lead**
+30. When tasks are completed progress the status of issues to close out
+31. Finally, focus on time management and seek help early
 
+Thank you for your support and patience. Good luck and may the best Team win.  
