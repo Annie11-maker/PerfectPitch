@@ -1,6 +1,18 @@
 # pitch-perfect
 
-We Are Team Pitch Perfect - Take Pride in our standards and enjoy the project
+**We Are Team Pitch Perfect**
+
+**********************************************************************************************************************************************************************************************
+
+**Shared Values**
+
+Respect      :  For Peers And Teachers
+Integrity    :  Do The Right Thing, Even When No One Is Watching
+Loyalty      :  To Team & Team Members - It Reflects On You
+Commitment   :  Give Your Best
+Empower      :  Help Each Other to Learn, Grow & Develop
+
+**********************************************************************************************************************************************************************************************
 
 **Communications & Operations Plan**
 
