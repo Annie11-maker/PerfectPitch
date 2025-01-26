@@ -6,11 +6,11 @@
 
 **Shared Values**
 
-Respect      :  For Peers And Teachers
-Integrity    :  Do The Right Thing, Even When No One Is Watching
-Loyalty      :  To Team & Team Members - It Reflects On You
-Commitment   :  Give Your Best
-Empower      :  Help Each Other to Learn, Grow & Develop
+1. Respect      :  For Peers And Teachers
+2. Integrity    :  Do The Right Thing, Even When No One Is Watching
+3. Loyalty      :  To Team & Team Members - It Reflects On You
+4. Commitment   :  Give Your Best
+5. Empower      :  Help Each Other to Learn, Grow & Develop
 
 **********************************************************************************************************************************************************************************************
 
