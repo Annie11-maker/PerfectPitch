@@ -1,3 +1,8 @@
+# pitch-perfect
+
+**Feature Generation Process Quick Reference**
+
+**********************************************************************************************************************************************************************************************
 
 Always start with the core models in your app that all future features will depend on 
 In Airbnb’s case, they are clearly User and Flat 
