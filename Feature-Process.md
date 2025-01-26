@@ -12,14 +12,14 @@ As a kick-off phase, you can therefore separate two main tasks:
 
 **********************************************************************************************************************************************************************************************
 
-Team #1 - Model kick-start:
+**Team #1 - Model kick-start:**
 
 1. Integrate User with Devise sign-in/signup
 2. Integrate Flat with listing (index) and creation (new/create)
 
 **********************************************************************************************************************************************************************************************
 
-Team #2 - Front-end kick-start:
+**Team #2 - Front-end kick-start:**
 
 1. Work on a clean layout with navbar/footer
 2. Build a simple, attractive home page
@@ -29,7 +29,7 @@ Team #2 - Front-end kick-start:
 
 **********************************************************************************************************************************************************************************************es
 
-Tasks organization
+**Tasks organization**
 
 Here is a list of different user stories to implement on the Airbnb project:
 
@@ -44,7 +44,7 @@ As a user, I can receive an email when someone books my flat
 
 **********************************************************************************************************************************************************************************************
 
-NOTE: Some of these features are more important than others. It’s your role to prioritize them to get an MVP at the end of the week!
+**NOTE:** Some of these features are more important than others. It’s your role to prioritize them to get an MVP at the end of the week!
 
 **********************************************************************************************************************************************************************************************
 
@@ -56,7 +56,7 @@ Let’s take the example of the “booking” feature:
 
 **********************************************************************************************************************************************************************************************
 
-MODEL
+**MODEL**
 
 I will create a Booking model and its associated migration
 Then I will write a working model with associations and validations
@@ -64,43 +64,43 @@ I will then crash-test my model from the rails console to make sure everything i
 
 **********************************************************************************************************************************************************************************************
 
-ROUTING:
+**ROUTING:**
 
 I will add bookings routes in routes.rb
 
 **********************************************************************************************************************************************************************************************
 
-CONTROLLER:
+**CONTROLLER:**
 
 I will create a new BookingsController with the create and index actions
 I will implement these two actions
 
 **********************************************************************************************************************************************************************************************
 
-VIEWS MODIFICATION:
+**VIEWS MODIFICATION:**
 
 I will embed the booking form in the existing views/flats/show.html.erb
 I will list all current user’s bookings on a new page views/bookings/index.html.erb
 
 **********************************************************************************************************************************************************************************************
 
-LINKS:
+**LINKS:**
 
 I will add a link to the bookings#indexpage in the navbar
 
 **********************************************************************************************************************************************************************************************
 
-HTML/CSS:
+**HTML/CSS:**
 
-CHECK 1. My booking form is clean with the correct Bootstrap classes for the inputs and buttons
+**CHECK 1.** My booking form is clean with the correct Bootstrap classes for the inputs and buttons
 
-CHECK 2. My new bookings page is clean with a container to center the content, clear headers, and a clean design for each booking
+**CHECK 2.** My new bookings page is clean with a container to center the content, clear headers, and a clean design for each booking
 
-CHECK 3. I will take time to refactor my HTML using partials if my HTML code is too long and hard to read
+**CHECK 3.** I will take time to refactor my HTML using partials if my HTML code is too long and hard to read
 
-SUPER: Code it perfectly, from model to view BOOM!!! #MarcoMode
+**SUPER:** Code it perfectly, from model to view BOOM!!! #MarcoMode
 
-NOTE: 
+**NOTE: **
 
 1. Crash test all your model associations and validations in the rails console
 
