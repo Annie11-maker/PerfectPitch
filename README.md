@@ -1,5 +1,7 @@
 # pitch-perfect
 
+We Are Team Pitch Perfect - Take Pride in our standards and enjoy the project
+
 **Communications & Operations Plan**
 
 **********************************************************************************************************************************************************************************************
@@ -149,23 +151,29 @@ Production Best Practice
 
 **********************************************************************************************************************************************************************************************
 
-1. Follow the instructions
-2. Refer to Read Me page
-3. Follow the Communication Plan 
-4. Figma & Design Led Development can make a world of a difference in our team’s result 
-5. Know exactly what each feature should look like
-6. Maintain a consistent design pattern
-7. Familiarise yourself with the information 
-8. Familiarise yourself with the information provided 
-9. Understand the communications plan 
-10. Familiarise yourself with the working process 
+01. Follow the instructions
+02. Refer to Read Me page
+03. Follow the Communication Plan 
+04. Figma & Design Led Development can make a world of a difference in our team’s result 
+05. Know exactly what each feature should look like
+06. Maintain a consistent design pattern
+07. Familiarise yourself with the information & resources
+08. Stick to the agreed plan and keep the project mission, goals and objective in mind
+09. Update the Slack channel with progress as soon as you complete the activity
+10. Familiarise yourself with the working process flow 
 11. Understand the objectives, features, and dependencies
 12. Take some time to review the mockup and think about the functionality and routes
 13. Be proactive in identifying blockers and highlight them immediately
-14. Pair Programming will continue for the next couple of issues
-15. At some point, Be prepared to handle and take sole responsibility for tasks 
+14. Pair Programming will be adopted as allocated for specific issues
+15. At some point, Be prepared to handle and take sole responsibility for tasks/issues 
 16. The instructions are provided to help you navigate through these seamlessly
-17. **If In Doubt** ask the **Task/Role Lead**
-18. When tasks are completed progress the status of issues to close out
-19. Finally, focus on time management and seek help early
+17. Handover must be prepared by Off Going Role Holder
+18. Handover must be completed before Daily Standup
+19. In Coming Role Holder to brief TA
+20. Out Going Role Holder to maintain contingency responsibility
+21. Communicate any absences in advance / before 0900 hrs daily in the Slack channel
+22. Please respect Teachers by attending all Lectures on Camera 
+23. **If In Doubt** ask the **Task/Role Lead**
+24. When tasks are completed progress the status of issues to close out
+25. Finally, focus on time management and seek help early
 
