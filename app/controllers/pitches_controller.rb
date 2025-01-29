@@ -3,6 +3,7 @@ class PitchesController < ApplicationController
   end
 
   def index
+    @pitches = Pitch.all
   end
 
   def create
