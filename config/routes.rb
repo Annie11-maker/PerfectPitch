@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -8,8 +9,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   resources :pitches do
     resources :reviews, only: [:create]
-    resources :favourites, only: [:create, :destroy]
+    resources :favourites, only: [:create]
   end
+
+  resources :favourites, only: [:index, :destroy]
   # Defines the root path route ("/")
   # root "posts#index"
 end

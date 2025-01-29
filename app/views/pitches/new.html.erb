@@ -1,2 +1,9 @@
-<h1>Pitches#new</h1>
-<p>Find me in app/views/pitches/new.html.erb</p>
+<h1>New Pitch</h1>
+
+<%= simple_form_for @pitch do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.submit "Create Pitch", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to 'Back to Pitches', pitches_path %>

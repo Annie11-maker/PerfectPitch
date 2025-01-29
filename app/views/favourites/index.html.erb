@@ -1,2 +1,8 @@
-<h1>Favourites#index</h1>
-<p>Find me in app/views/favourites/index.html.erb</p>
+<h1>My Favourites</h1>
+<% @favourites.each do |favourite| %>
+  <h5 class="card-title"><%= favourite.pitch.name %></h5>
+  <p><strong>Price:</strong> $<%= favourite.pitch.description %></p>
+  <%= link_to favourite_path(favourite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this from your favourites?" }, class: "btn btn-danger btn-sm mt-auto" do %>
+  <i class="fas fa-trash-alt"></i> Remove
+  <% end %>
+<% end %>
