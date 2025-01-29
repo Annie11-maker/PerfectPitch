@@ -5,13 +5,13 @@
 **********************************************************************************************************************************************************************************************
 **Shared Values**
 
-1. Respect      :  For Peers And Teachers
 1. Respect      :  For Peers, Teachers & Self
 2. Integrity    :  Do The Right Thing, Even When No One Is Watching
 3. Loyalty      :  To Team & Team Members - It Reflects On You
 3. Loyalty      :  To Project Mission & Team Members - It Reflects On You
 4. Commitment   :  Give Your Best
 5. Empower      :  Help Each Other to Learn, Grow & Develop
+6. Inculpable   : Experimenting and engaging without blame culture under the pretext of feedback
 
 **********************************************************************************************************************************************************************************************
 
