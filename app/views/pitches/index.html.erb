@@ -2,8 +2,8 @@
 <div>
   <ul>
     <% @pitches.each do |pitch| %>
-      <li><%= pitch.name %></li>
-      <li><%= pitch.description %></li>
-    <% end %>  
+      <li><%= link_to pitch.name, pitch_path(pitch) %></li>
+    <% end %>
+
   </ul>
 </div>
