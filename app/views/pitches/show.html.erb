@@ -1,5 +1,18 @@
 <h1>Pitch name: <%= @pitch.name %></h1>
 <p>Pitch Description: <%= @pitch.description %></p>
+<% if @pitch.user == current_user %>
+      <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-warning mt-2" do %>
+        <i class="fas fa-trash-alt"></i>
+        <% end %>
+<% end %>
+
+<% if current_user.favourites.find_by(pitch: @pitch).nil? %>
+      <%= simple_form_for [@pitch, @favourite] do |f| %>
+        <%= f.submit "⭐Add to favourites", class: "btn btn-primary" %>
+        <% end %>
+<% else %>
+            <p>This pitch is already in your favourites.</p>
+<% end %>
 
 <h2>Reviews</h2>
 <% @pitch.reviews.each do |review| %>

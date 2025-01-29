@@ -1,16 +1,16 @@
 class FavouritesController < ApplicationController
   def index
-    @favourites = Favourite.all
+    @favourites = current_user.favourites.includes(:pitch)
   end
 
   def create
     @pitch = Pitch.find(params[:pitch_id])
-    @favourite = Favourite.new
+    @favourite = current_user.favourites.new(pitch: @pitch)
     @favourite.pitch = @pitch
     if @favourite.save
-      redirect_to pitch_path(@pitch)
+      redirect_to pitch_path(@pitch), notice: 'pitch added to favourites!'
     else
-      render 'pitches/show', status: :unprocessable_entity
+      redirect_to pitch_path(@pitch), alert: 'Unable to add pitch to favourites.'
     end
   end
 
@@ -21,5 +21,8 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
+    @favourite = Favourite.find(params[:id])
+    @favourite.destroy
+    redirect_to favourites_path, notice: 'Pitch removed from favourites.'
   end
 end
