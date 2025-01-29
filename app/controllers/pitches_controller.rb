@@ -5,9 +5,17 @@ class PitchesController < ApplicationController
   end
 
   def create
+    @pitch = Pitch.new(pitch_params)
+    @pitch.user = current_user
+    if @pitch.save
+      redirect_to new_pitch_path(@pitch)
+    else
+      render :new
+    end
   end
 
   def new
+    @pitch = Pitch.new
   end
 
   def show
