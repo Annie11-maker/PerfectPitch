@@ -1,8 +1,7 @@
 class PitchesController < ApplicationController
-  def users
-  end
 
   def index
+    @pitches = Pitch.all
   end
 
   def create
@@ -12,6 +11,10 @@ class PitchesController < ApplicationController
   end
 
   def show
+    @pitch = Pitch.find(params[:id])
+    @review = Review.new
+    @favourite = Favourite.new
+    @favourites = Favourite.all
   end
 
   def edit
@@ -22,4 +25,15 @@ class PitchesController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def set_pitch
+    @pitch = Pitch.find(params[:id])
+  end
+
+  def pitch_params
+    params.require(:pitch).permit(:name, :description)
+  end
+
 end
