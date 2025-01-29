@@ -8,7 +8,7 @@ class PitchesController < ApplicationController
     @pitch = Pitch.new(pitch_params)
     @pitch.user = current_user
     if @pitch.save
-      redirect_to new_pitch_path(@pitch)
+      redirect_to pitch_path(@pitch)
     else
       render :new
     end
