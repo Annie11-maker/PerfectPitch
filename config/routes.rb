@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   resources :pitches do
     resources :reviews, only: [:create]
-    resources :favourites, only: [:create, :destroy]
+    resources :favourites, only: [:create]
   end
+
+  resources :favourites, only: [:index, :destroy]
   # Defines the root path route ("/")
   # root "posts#index"
 end
