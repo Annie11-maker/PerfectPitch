@@ -30,13 +30,10 @@
 
 **********************************************************************************************************************************************************************************************
 
-**Standup Instructions**
 **Standup Instructions - PM of THE DAY**
 
 ** Project Lead / Daily Lead to be prepared to brief TA on Daily Plan **
-** Brief TA on Daily Plan **
 
-1. Share their screen with the Kanban board & App opened
 1. Share your screen with the Kanban board & App opened
 2. Previous day’s recap: round table with everyone’s actual completed tasks
 3. Today’s program: round table for which features/page you will work on today
