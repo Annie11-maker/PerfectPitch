@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   has_many :pitches
   has_many :favourites
+
+  validates :user_name, presence: true, uniqueness: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end

@@ -1,4 +1,9 @@
-<h1>Awesome Pitches for LeWagon Students</h1>
-<h2>Let AI create your pitch your winning pitch for your bootcamp project</h2>
-<p>Generate Pitch</p>
-<P> Explore public pitches</P>
+<div class="text-center">
+  <h1>Awesome Pitches for LeWagon Students</h1>
+  <h2>Let AI create your winning pitch for your bootcamp project</h2>
+</div>
+
+<div class="d-flex justify-content-center gap-3">
+  <%= button_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
+  <%= button_to "Explore Public Pitches", pitches_path, class: "btn btn-secondary" %>
+</div>
