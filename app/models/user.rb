@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :pitches
   has_many :favourites
+  has_one_attached :photo
 
   validates :user_name, presence: true, uniqueness: true
   validates :first_name, presence: true
