@@ -15,5 +15,15 @@
       <%= render "shared/navbar" %>
     </header>
     <%= yield %>
+    <script>
+      document.getElementById('copy-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        navigator.clipboard.writeText('<%= request.original_url %>').then(function() {
+          alert('Link copied to clipboard!');
+        }).catch(function(err) {
+          alert('Failed to copy the link: ' + err);
+        });
+      });
+    </script>
   </body>
 </html>
