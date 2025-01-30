@@ -1,42 +1,106 @@
-<h1>Pitch name: <%= @pitch.name %></h1>
-<p>Pitch Description: <%= @pitch.description %></p>
-<% if @pitch.user == current_user %>
-      <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-warning mt-2" do %>
-        <i class="fas fa-trash-alt"></i>
-        <% end %>
-<% end %>
+<div class="container mt-5">
+  <div id="pitchImagesCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 300px; width: 80%; border-radius: 10px;">
+            <p class="text-muted">📷 Image 1</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 300px; width: 80%; border-radius: 10px;">
+            <p class="text-muted">📷 Image 2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 300px; width: 80%; border-radius: 10px;">
+            <p class="text-muted">📷 Image 3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 300px; width: 80%; border-radius: 10px;">
+            <p class="text-muted">📷 Image 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="card shadow p-4 mt-4">
+    <h4 class="mb-3 text-muted">Pitch Name: <%= @pitch.name %></h4>
+    <p class="lead text-muted"><strong>Description:</strong> <%= @pitch.description %></p>
+
+    <div class="mt-3">
+      <% if @pitch.user == current_user %>
+        <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-warning mt-2" do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      <% end %>
+    </div>
 <%= link_to "#", class: "btn btn-secondary mt-2", id: "copy-link" do %>
-    <i class="fas fa-copy"></i>
+  <i class="fas fa-copy"></i>
+<% end %>
+
+<div class="mt-3">
+  <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
+    <%= simple_form_for [@pitch, @favourite] do |f| %>
+      <%= f.submit "⭐ Add to Favourites", class: "btn btn-primary" %>
+    <% end %>
   <% end %>
-
-
-
-
-
-
-
-
-<% if current_user.favourites.find_by(pitch: @pitch).nil? %>
-      <%= simple_form_for [@pitch, @favourite] do |f| %>
-        <%= f.submit "⭐Add to favourites", class: "btn btn-primary" %>
+</div>
         <% end %>
-<% else %>
-            <p>This pitch is already in your favourites.</p>
-<% end %>
+      <% else %>
+        <p class="text-success fw-bold">✅ This pitch is already in your favourites.</p>
+      <% end %>
+    </div>
+  </div>
 
-<h2>Reviews</h2>
-<% @pitch.reviews.each do |review| %>
-  <p>Rating: <%= review.rating %></p>
-  <p>Comment: <%= review.comment %></p>
-<% end %>
+  <div class="card mt-5 p-4 shadow-sm">
+    <h3 class="text-secondary">Add a Review</h3>
+    <%= simple_form_for [@pitch, @review] do |f| %>
+      <div class="mb-3">
+        <%= f.input :comment, label: "Your Review", input_html: { class: "form-control" } %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :rating, collection: 1..5, label: "Rating (1-5)", input_html: { class: "form-select" } %>
+      </div>
+      <%= f.submit "Submit Review", class: "btn btn-success" %>
+    <% end %>
+  </div>
 
-<h3>Add a Review</h3>
-<%= simple_form_for [@pitch, @review] do |f| %>
-          <%= f.input :comment %>
-          <%= f.input :rating, collection: 1..5 %>
-          <%= f.submit "Submit Review", class: "btn btn-primary" %>
-<% end %>
+  <div class="mt-5">
+    <h2 class="text-primary">Reviews</h2>
 
+    <% if @pitch.reviews.any? %>
+      <div class="list-group">
+        <% @pitch.reviews.each do |review| %>
+          <div class="list-group-item">
+            <p><strong>⭐ Rating:</strong> <%= review.rating %> / 5</p>
+            <p><strong>💬 Comment:</strong> <%= review.comment %></p>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-muted">No reviews yet. Be the first to add one!</p>
+    <% end %>
+  </div>
 
-<%= link_to 'Back to Pitches', pitches_path %>
+</div>

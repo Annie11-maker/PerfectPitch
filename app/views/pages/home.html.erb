@@ -1,9 +1,11 @@
-<div class="text-center">
-  <h1>Awesome Pitches for LeWagon Students</h1>
-  <h2>Let AI create your winning pitch for your bootcamp project</h2>
-</div>
+<div class="container-fluid bg-dark text-white min-vh-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="text-center">
+    <h1>Awesome Pitches for LeWagon Students</h1>
+    <h2>Let AI create your winning pitch for your bootcamp project</h2>
+  </div>
 
-<div class="d-flex justify-content-center gap-3">
-  <%= button_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
-  <%= button_to "Explore Public Pitches", pitches_path, class: "btn btn-secondary" %>
+  <div class="d-flex justify-content-center gap-3 mt-4">
+    <%= link_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
+    <%= link_to "Explore Public Pitches", pitches_path, class: "btn btn-secondary" %>
+  </div>
 </div>
