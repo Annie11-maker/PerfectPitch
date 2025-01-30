@@ -1,4 +1,5 @@
 class PitchesController < ApplicationController
+  before_action :set_pitch, only: [:show, :destroy]
 
   def index
     @pitches = Pitch.all
@@ -19,7 +20,6 @@ class PitchesController < ApplicationController
   end
 
   def show
-    @pitch = Pitch.find(params[:id])
     @review = Review.new
     @favourite = Favourite.new
     @favourites = Favourite.all
@@ -32,6 +32,8 @@ class PitchesController < ApplicationController
   end
 
   def destroy
+    @pitch.destroy
+    redirect_to pitches_path, status: :see_other
   end
 
   private
