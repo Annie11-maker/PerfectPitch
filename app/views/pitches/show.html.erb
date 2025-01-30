@@ -55,17 +55,15 @@
         <% end %>
       <% end %>
     </div>
-<%= link_to "#", class: "btn btn-secondary mt-2", id: "copy-link" do %>
-  <i class="fas fa-copy"></i>
-<% end %>
 
-<div class="mt-3">
-  <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
-    <%= simple_form_for [@pitch, @favourite] do |f| %>
-      <%= f.submit "⭐ Add to Favourites", class: "btn btn-primary" %>
+    <%= link_to "#", class: "btn btn-secondary mt-2", id: "copy-link" do %>
+      <i class="fas fa-copy"></i>
     <% end %>
-  <% end %>
-</div>
+
+    <div class="mt-3">
+      <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
+        <%= simple_form_for [@pitch, @favourite] do |f| %>
+          <%= f.submit "⭐ Add to Favourites", class: "btn btn-primary" %>
         <% end %>
       <% else %>
         <p class="text-success fw-bold">✅ This pitch is already in your favourites.</p>
