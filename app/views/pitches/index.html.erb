@@ -1,9 +1,20 @@
-<h1>Pitches</h1>
-<div>
-  <ul>
-    <% @pitches.each do |pitch| %>
-      <li><%= link_to pitch.name, pitch_path(pitch) %></li>
-    <% end %>
+<div class="container mt-5">
+  <div class="text-center">
+    <h1 class="display-4">Pitches</h1>
+  </div>
 
-  </ul>
+
+  <div class="row mt-5">
+    <% @pitches.each do |pitch| %>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= pitch.name %></h5>
+            <p class="card-text"><%= truncate(pitch.description, length: 100) %></p>
+            <a href="<%= pitch_path(pitch) %>" class="btn btn-outline-primary">View Pitch</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
