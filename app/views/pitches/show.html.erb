@@ -6,6 +6,17 @@
         <% end %>
 <% end %>
 
+<%= link_to "#", class: "btn btn-secondary mt-2", id: "copy-link" do %>
+    <i class="fas fa-copy"></i>
+  <% end %>
+
+
+
+
+
+
+
+
 <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
       <%= simple_form_for [@pitch, @favourite] do |f| %>
         <%= f.submit "⭐Add to favourites", class: "btn btn-primary" %>
