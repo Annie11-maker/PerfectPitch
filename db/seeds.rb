@@ -23,13 +23,15 @@ annie = User.create!(user_name: 'Aweseome Annie', first_name: "Annie", last_name
 gabriel = User.create!(user_name: 'Go Getter Gab', first_name: "Gabriel", last_name: "Atak", email: "gabriel@gmail.com", password: "password")
 marco = User.create!(user_name: 'Money Marco', first_name: "Marco", last_name: "Ricci", email: "marco@gmail.com", password: "password")
 
+puts 'Users Created'
 # Create Pitchs
+puts 'Creating Pitches...'
 Pitch.create(name: "Dimyron OS", description: "Dimyron OS is a next-generation mobile operating system seamlessly integrating Nettpage, Pasanda, and AI-driven tools—designed for users who want a smarter, more connected, and future-ready digital experience.", user: david)
 Pitch.create(name: "Pasanda – The Ultimate Food & Travel Hub", description: "Pasanda merges ride-hailing, food delivery, and AI-powered grocery shopping with Yummo for food explorers and Pasanda Chef for interactive cooking tutorials—creating the ultimate experience for foodies and travelers.", user: san)
 Pitch.create(name: "Nettpage – The Future of Social E-Commerce", description: "Nettpage blends social media with e-commerce, letting users connect, shop, and sell in one seamless experience. Businesses engage directly with customers, while shoppers explore, purchase, and share—all in a dynamic social marketplace.", user: michelle)
 
 Pitch.create(name: "SwiftServe", description: "Smart routing and predictive demand analytics to streamline food deliveries for restaurants and couriers.", user: annie)
 Pitch.create(name: "EchoLink", description: "Send customized voice messages with AI-enhanced tone, emotion, and language translation for global communication.", user: gabriel)
-Pitch.create(name: "Pitch Perfect", description: "Pitch Perfect vision is to be an open-source platform that will ultimately enable every Le Wagon student to find a safe space to contribute and practice their skills during and post Bootcamp with peer support from the alumni community.
+Pitch.create(name: "Pitch Perfect", description: "Pitch Perfect vision is to be an open-source platform that will ultimately enable every Le Wagon student to find a safe space to contribute and practice their skills during and post Bootcamp with peer support from the alumni community.", user: marco)
 
-", user: marco)
+puts 'Pitches Created'
