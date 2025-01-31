@@ -30,6 +30,4 @@ Pitch.create(name: "Nettpage – The Future of Social E-Commerce", description: 
 
 Pitch.create(name: "SwiftServe", description: "Smart routing and predictive demand analytics to streamline food deliveries for restaurants and couriers.", user: annie)
 Pitch.create(name: "EchoLink", description: "Send customized voice messages with AI-enhanced tone, emotion, and language translation for global communication.", user: gabriel)
-Pitch.create(name: "Pitch Perfect", description: "Pitch Perfect vision is to be an open-source platform that will ultimately enable every Le Wagon student to find a safe space to contribute and practice their skills during and post Bootcamp with peer support from the alumni community.
-
-", user: marco)
+Pitch.create(name: "Pitch Perfect", description: "Pitch Perfect vision is to be an open-source platform that will ultimately enable every Le Wagon student to find a safe space to contribute and practice their skills during and post Bootcamp with peer support from the alumni community.", user: marco)
