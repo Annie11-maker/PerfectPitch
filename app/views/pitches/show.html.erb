@@ -2,9 +2,18 @@
   <div id="pitchImagesCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
+  <div class="d-flex justify-content-center">
+    <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
+      <%= image_tag asset_path("fullsize/#{@pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
+    </div>
+  </div>
+</div>
+
+
+      <div class="carousel-item">
         <div class="d-flex justify-content-center">
           <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Image 1</p>
+            <p class="text-muted">📷 Placeholder 2</p>
           </div>
         </div>
       </div>
@@ -12,7 +21,7 @@
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
           <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Image 2</p>
+            <p class="text-muted">📷 Placeholder 3</p>
           </div>
         </div>
       </div>
@@ -20,26 +29,18 @@
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
           <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Image 3</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Image 4</p>
+            <p class="text-muted">📷 Placeholder 4</p>
           </div>
         </div>
       </div>
     </div>
 
     <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #d76b1f;"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #d76b1f;"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
@@ -105,6 +106,5 @@
     <% end %>
   </div>
 
-  <%= link_to 'Back to Pitches', pitches_path %>
-  <%#= @pitch.content %>
+  <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-outline-secondary mt-4" %>
 </div>
