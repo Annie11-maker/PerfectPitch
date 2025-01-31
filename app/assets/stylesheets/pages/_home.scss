@@ -1,1 +1,72 @@
 // Specific CSS for your home-page
+h1 {
+  color:#670BFF;
+}
+
+h2 {
+  color:#8947f5;
+}
+
+.landing-page {
+  // background-image: asset-url("background-image.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  justify-content: center;
+  // justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  color: white; /* Ensure text is visible */
+  flex-direction: column;
+
+}
+
+.content {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 100%;
+  margin-right: 20px; /* Optional: Add space between content and edge of screen */
+  text-align: center;
+  // justify-content: center;
+}
+
+.btn-primary {
+  background-color: #670BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #670BFF;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #670BFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #670BFF;
+  color: white;
+}
