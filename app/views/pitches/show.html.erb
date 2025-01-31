@@ -75,4 +75,23 @@
       <% end %>
     </div>
   </div>
+
+  <div class="mt-5">
+    <h2 class="text-primary">Reviews</h2>
+
+    <% if @pitch.reviews.any? %>
+      <div class="list-group">
+        <% @pitch.reviews.each do |review| %>
+          <div class="list-group-item">
+            <p><strong>⭐ Rating:</strong> <%= review.rating %> / 5</p>
+            <p><strong>💬 Comment:</strong> <%= review.comment %></p>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-muted">No reviews yet. Be the first to add one!</p>
+    <% end %>
+  </div>
+</div>
+
 </div>
