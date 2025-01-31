@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color:rgb(7, 4, 2);">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color:#670BFF;">
   <div class="container-fluid">
     <div class="d-flex align-items-center">
 
@@ -24,15 +24,15 @@
             <%= link_to "Create a new pitch", new_pitch_path, class: "nav-link text-white" %>
           </li>
           <li class="nav-item dropdown">
-            <a href="#" class="avatar text-white" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="avatar text-black" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s", class: "avatar", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My Profile", "#", class: "dropdown-item text-white" %>
-              <%= link_to "My Pitches", pitches_path, class: "dropdown-item text-white" %>
-              <%= link_to "My favourites", favourites_path, class: "dropdown-item text-white" %>
-              <%= link_to "About us", "#", class: "dropdown-item text-white" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-white" %>
+              <%= link_to "My Profile", "#", class: "dropdown-item text-black" %>
+              <%= link_to "My Pitches", pitches_path, class: "dropdown-item text-black" %>
+              <%= link_to "My favourites", favourites_path, class: "dropdown-item text-black" %>
+              <%= link_to "About us", "#", class: "dropdown-item text-black" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-black" %>
             </div>
           </li>
         <% else %>

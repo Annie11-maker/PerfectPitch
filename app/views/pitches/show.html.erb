@@ -1,55 +1,55 @@
 <div class="container mt-5">
-  <div id="pitchImagesCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-  <div class="d-flex justify-content-center">
-    <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-      <%= image_tag asset_path("fullsize/#{@pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
-    </div>
-  </div>
-</div>
-
-
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Placeholder 2</p>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div id="pitchImagesCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 500px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
+                <%= image_tag asset_path("fullsize/#{@pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
+                <p class="text-muted">📷 Placeholder 2</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Placeholder 3</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <div class="bg-light d-flex justify-content-center align-items-center" style="height: 500px; width: 80%; border-radius: 10px;">
-            <p class="text-muted">📷 Placeholder 4</p>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #670BFF;"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #670BFF;"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #d76b1f;"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: #d76b1f;"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col-md-4">
+      <div class="card p-4 shadow-sm h-100">
+        <h3 class="text-secondary">Add a Review</h3>
+        <%= simple_form_for [@pitch, @review] do |f| %>
+          <div class="mb-3">
+            <%= f.input :comment, label: "Your Review", input_html: { class: "form-control" } %>
+          </div>
+          <div class="mb-3">
+            <%= f.input :rating, collection: 1..5, label: "Rating (1-5)", input_html: { class: "form-select" } %>
+          </div>
+          <%= f.submit "Submit Review", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="card shadow p-4 mt-4">
+  <div class="card shadow p-4 mt-4 text-center w-100">
     <h4 class="mb-3 text-muted">Pitch Name: <%= @pitch.name %></h4>
     <p class="lead text-muted"><strong>Description:</strong> <%= @pitch.description %></p>
 
-    <div class="d-flex justify-content-end mt-3">
+    <div class="d-flex justify-content-center mt-3">
       <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
         <%= simple_form_for [@pitch, @favourite] do |f| %>
           <%= f.submit "🌟", class: "btn btn-light me-2" %>
@@ -75,36 +75,4 @@
       <% end %>
     </div>
   </div>
-
-  <div class="card mt-5 p-4 shadow-sm">
-    <h3 class="text-secondary">Add a Review</h3>
-    <%= simple_form_for [@pitch, @review] do |f| %>
-      <div class="mb-3">
-        <%= f.input :comment, label: "Your Review", input_html: { class: "form-control" } %>
-      </div>
-      <div class="mb-3">
-        <%= f.input :rating, collection: 1..5, label: "Rating (1-5)", input_html: { class: "form-select" } %>
-      </div>
-      <%= f.submit "Submit Review", class: "btn btn-success" %>
-    <% end %>
-  </div>
-
-  <div class="mt-5">
-    <h2 class="text-primary">Reviews</h2>
-
-    <% if @pitch.reviews.any? %>
-      <div class="list-group">
-        <% @pitch.reviews.each do |review| %>
-          <div class="list-group-item">
-            <p><strong>⭐ Rating:</strong> <%= review.rating %> / 5</p>
-            <p><strong>💬 Comment:</strong> <%= review.comment %></p>
-          </div>
-        <% end %>
-      </div>
-    <% else %>
-      <p class="text-muted">No reviews yet. Be the first to add one!</p>
-    <% end %>
-  </div>
-
-  <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-outline-secondary mt-4" %>
 </div>
