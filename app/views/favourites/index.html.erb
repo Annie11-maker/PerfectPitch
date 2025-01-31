@@ -7,20 +7,23 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
-              <p class="text-muted">📷 Image 1</p>
+              <%= image_tag asset_path("fullsize/#{favourite.pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
             </div>
           </div>
+
           <div class="carousel-item">
             <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
               <p class="text-muted">📷 Image 2</p>
             </div>
           </div>
+
           <div class="carousel-item">
             <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
               <p class="text-muted">📷 Image 3</p>
             </div>
           </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-<%= favourite.id %>" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
           <span class="visually-hidden">Previous</span>
@@ -35,7 +38,7 @@
         <h5 class="card-title text-muted" style="font-size: 0.9rem;"><%= favourite.pitch.name %></h5>
         <p class="card-text text-muted" style="font-size: 0.8rem;"><strong>Price:</strong> $<%= favourite.pitch.description %></p>
 
-        <%= link_to favourite_path(favourite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this from your favourites?" }, class: "btn btn-warning btn-sm" do %>
+        <%= link_to favourite_path(favourite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this from your favourites?" }, class: "btn btn-primary btn-sm" do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       </div>
