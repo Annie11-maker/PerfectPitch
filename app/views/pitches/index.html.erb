@@ -1,4 +1,4 @@
-<header class="masthead" style="background-image: url('<%= asset_path('bg-masthead.jpg') %>'); background-size: cover; background-position: center; height: 100vh;">
+<header class="masthead" style="background-image: url('<%= asset_path('bg-masthead.jpg') %>'); background-size: cover; background-position: center; height: 60vh;">
   <div class="container px-4 px-lg-5 h-100">
     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
       <div class="col-lg-8 align-self-end">
@@ -15,7 +15,7 @@
   </div>
 </header>
 
-<section id="about" class="page-section" style="background-color: #8947f5; height: 600px; display: flex; align-items: center; justify-content: center;">
+<section id="about" class="page-section" style="background-color: #8947f5; height: 400px; display: flex; align-items: center; justify-content: center;">
   <div class="container px-4 px-lg-5 text-center">
     <div class="row gx-4 gx-lg-5 justify-content-center">
       <div class="col-lg-8">
@@ -32,12 +32,17 @@
 
 <section id="portfolio" class="page-section">
   <div class="container-fluid p-0">
+    <h2 class="text-center mb-4">Have a look at these Fabulous pitches</h2>
     <div class="row g-0">
       <% @pitches.each do |pitch| %>
         <div class="col-lg-4 col-sm-6">
           <%= link_to pitch_path(pitch), class: 'portfolio-box' do %>
             <div class="card h-100 position-relative">
-              <img src="<%= asset_path("fullsize/#{pitch.id}.jpg") %>" alt="..." class="img-fluid">
+              <% if pitch.id > 1 && pitch.id < 6 %>
+                <img src="<%= asset_path("fullsize/#{pitch.id}.jpg") %>" alt="..." class="img-fluid">
+              <% else %>
+                <img src="<%= asset_path("fullsize/1.jpg") %>" alt="..." class="img-fluid">
+              <% end %>
               <div class="portfolio-box-caption d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100">
                 <div class="project-name text-center text-white w-100">
                   <span class="ellipse-bg">
@@ -52,47 +57,6 @@
     </div>
   </div>
 </section>
-
-
-
-<section id="services" class="page-section">
-  <div class="container px-4 px-lg-5">
-    <h2 class="text-center mt-0">At Your Service</h2>
-    <hr class="divider">
-    <div class="row gx-4 gx-lg-5">
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <i class="bi-gem fs-1" style="color: #8947f5;"></i>
-          <h3 class="h4 mb-2">Amazing Themes</h3>
-          <p class="text-muted mb-0">Our themes are cruelty-free!</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <i class="bi-laptop fs-1 " style="color: #8947f5;"></i>
-          <h3 class="h4 mb-2">Up to Date</h3>
-          <p class="text-muted mb-0">Keeping things fresh.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <i class="bi-globe fs-1" style="color: #8947f5;"></i>
-          <h3 class="h4 mb-2">Ready to Present</h3>
-          <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="mt-5">
-          <i class="bi-heart fs-1" style="color: #8947f5;"></i>
-          <h3 class="h4 mb-2">Made with Love</h3>
-          <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 <br>
 
