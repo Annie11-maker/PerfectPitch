@@ -24,6 +24,28 @@ h2 {
 
 }
 
+#services {
+  margin-top: -180px; /* Move it fully up */
+  padding: 20px 0; /* Less padding to shrink section */
+}
+
+#services h2 {
+  font-size: 1.5rem; /* Make heading smaller */
+}
+
+#services .fs-1 {
+  font-size: 1.5rem !important; /* Reduce icon size */
+}
+
+#services .h4 {
+  font-size: 1rem; /* Make subheadings smaller */
+}
+
+#services p {
+  font-size: 0.8rem; /* Reduce paragraph text size */
+}
+
+
 .content {
   padding: 20px;
   border-radius: 5px;
