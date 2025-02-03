@@ -36,6 +36,12 @@ class PitchesController < ApplicationController
     redirect_to pitches_path, status: :see_other
   end
 
+  def generate_ppt
+    @pitch = Pitch.find(params[:id])
+    ppt_file = create_ppt(@pitch)
+    send_file ppt_file, type: "application/vnd.openxmlformats-officedocument.presentationml.presentation", filename: "#{@pitch.name.parameterize}.pptx"
+  end
+
   private
 
   def set_pitch
@@ -44,6 +50,28 @@ class PitchesController < ApplicationController
 
   def pitch_params
     params.require(:pitch).permit(:name, :description)
+  end
+
+  def create_ppt(pitch)
+    ppt = Powerpoint::Presentation.new
+
+    # Title Slide
+    # ppt.add_textual_slide(@pitch.name)
+
+    # Pain Points Slide
+    ppt.add_textual_slide("Pain Points", @pitch.content.split("\n")[0..3])
+
+    # Audience Slide
+    ppt.add_textual_slide("Target Audience", @pitch.content.split("\n")[4..7])
+
+    # Solution Slide
+    ppt.add_textual_slide("Solution", @pitch.content.split("\n")[8..11])
+
+    # Save File
+    file_path = Rails.root.join('tmp', "#{@pitch.name.parameterize}.pptx")
+    ppt.save(file_path)
+
+    file_path
   end
 
 end
