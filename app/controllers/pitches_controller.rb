@@ -49,7 +49,7 @@ class PitchesController < ApplicationController
   end
 
   def pitch_params
-    params.require(:pitch).permit(:name, :description)
+    params.require(:pitch).permit(:name, :description, :photo )
   end
 
   def create_ppt(pitch)
