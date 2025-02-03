@@ -6,17 +6,51 @@
           <div class="carousel-item active">
             <div class="d-flex justify-content-center">
               <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
-                <%= image_tag asset_path("fullsize/#{@pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
+                <% if @pitch.related_image %>
+                  <%= image_tag @pitch.related_image, class: "d-block w-100", alt: "Pitch Image" %>
+                <% else %>
+                  <h4 class="text-center w-100" style="font-size: 2rem; color: #670BFF; font-weight: bold;"><%= @pitch.name %></h4>
+                <% end %>
+                <div class="pitch-name-overlay position-absolute w-100 text-center" style="top: 50%; transform: translateY(-50%);">
+                  <h4 class="text-white" style="font-size: 3rem; font-weight: bold;"><%= @pitch.name %></h4>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
-              <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
-                <p class="text-muted">📷 Placeholder 2</p>
+              <div class="bg-light d-flex flex-column justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
+                <h5 class="text-center text-primary mb-3">Pain</h5>
+                <ul class="list-unstyled">
+                  <%= @pitch.content.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
               </div>
             </div>
           </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="bg-light d-flex flex-column justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
+                <h5 class="text-center text-primary mb-3">Audience</h5>
+                <ul class="list-unstyled">
+                  <%= @pitch.content.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="bg-light d-flex flex-column justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
+                <h5 class="text-center text-primary mb-3">Solution</h5>
+                <ul class="list-unstyled">
+                  <%= @pitch.content.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #670BFF;"></span>
@@ -52,24 +86,25 @@
     <div class="d-flex justify-content-center mt-3">
       <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
         <%= simple_form_for [@pitch, @favourite] do |f| %>
-          <%= f.submit "🌟", class: "btn btn-light me-2" %>
+          <%= f.submit "🌟", class: "btn btn-primary me-2" %>
         <% end %>
       <% else %>
         <%= simple_form_for [@pitch, @favourite] do |f| %>
-          <%= f.submit "⭐", class: "btn btn-light me-2" %>
+          <%= f.submit "⭐", class: "btn btn-primary me-2", disabled: @favourite.present? %>
         <% end %>
       <% end %>
 
-      <%= link_to "#", class: "btn btn-light me-2", id: "copy-link" do %>
+      <%= link_to "#", class: "btn btn-primary me-2", id: "copy-link" do %>
         <i class="fas fa-copy"></i>
       <% end %>
 
-      <%= link_to "#", class: "btn btn-light me-2" do %>
-        <i class="fas fa-download"></i>
+      <%= link_to generate_ppt_pitch_path(@pitch), class: "btn btn-primary me-2" do %>
+        <i class="fas fa-download"></i> Download Presentation
       <% end %>
 
+
       <% if @pitch.user == current_user %>
-        <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-light" do %>
+        <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-primary" do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       <% end %>
@@ -92,6 +127,4 @@
       <p class="text-muted">No reviews yet. Be the first to add one!</p>
     <% end %>
   </div>
-</div>
-
 </div>
