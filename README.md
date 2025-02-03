@@ -1,6 +1,11 @@
 # pitch-perfect
 
+![Heading](https://github.com/user-attachments/assets/ebe9eee6-dc19-49a2-8492-70bf7cb0ed54)
+
 **We Are Team Pitch Perfect**
+
+![Screenshot 2025-02-03 at 05 16 00](https://github.com/user-attachments/assets/48c400f2-3422-46d9-83f3-32a1fb8dc9ac)
+
 
 **********************************************************************************************************************************************************************************************
 **Shared Values**
@@ -51,7 +56,12 @@
 
 **Project Programme**
 
-![Screenshot 2025-01-26 at 18 31 43](https://github.com/user-attachments/assets/ef299f69-46f3-4db6-a5a4-17fb700eb66b)
+![Screenshot 2025-02-03 at 06 09 56](https://github.com/user-attachments/assets/d89191df-26ba-41da-ba33-5b5e9d266070)
+
+![Screenshot 2025-02-03 at 06 10 18](https://github.com/user-attachments/assets/72a95d40-6b1f-439a-b10b-09f95535b1ea)
+
+![Screenshot 2025-02-03 at 06 11 10](https://github.com/user-attachments/assets/6ea9d461-e2c5-48e2-a68f-60cf5b88dda9)
+
 
 As at 27 Jan 2025
 **********************************************************************************************************************************************************************************************
