@@ -11,6 +11,10 @@
         <%= f.input :description, label: "Pitch Description", as: :text, input_html: { class: "form-control", rows: 4 } %>
       </div>
 
+      <div class="mb-3">
+        <%= f.input :photo, label: "Pitch Display Image", as: :file %>
+      </div>
+
       <div class="d-flex justify-content-between">
         <%= f.submit "Create Pitch", class: "btn btn-primary" %>
         <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-secondary" %>

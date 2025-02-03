@@ -8,6 +8,8 @@
               <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
                 <% if @pitch.image_url.present? %>
                   <%= image_tag @pitch.image_url, alt: @pitch.name, class: "img-fluid" %>
+                <% elsif @pitch.photo.attached? %>
+                  <%= cl_image_tag @pitch.photo.key, height: 300, width: 400, crop: :fill %>
                 <% else %>
                   <img src="<%= asset_path("fullsize/1.jpg") %>" alt="..." class="img-fluid">
                 <% end %>
@@ -78,6 +80,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <div class="card shadow p-4 mt-4 text-center w-100">
     <h4 class="mb-3 text-muted">Pitch Name: <%= @pitch.name %></h4>
