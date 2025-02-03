@@ -6,10 +6,10 @@
           <div class="carousel-item active">
             <div class="d-flex justify-content-center">
               <div class="bg-light d-flex justify-content-center align-items-center w-100 h-100" style="border-radius: 10px;">
-                <% if @pitch.related_image %>
-                  <%= image_tag @pitch.related_image, class: "d-block w-100", alt: "Pitch Image" %>
+                <% if @pitch.image_url.present? %>
+                  <%= image_tag @pitch.image_url, alt: @pitch.name, class: "img-fluid" %>
                 <% else %>
-                  <h4 class="text-center w-100" style="font-size: 2rem; color: #670BFF; font-weight: bold;"><%= @pitch.name %></h4>
+                  <img src="<%= asset_path("fullsize/1.jpg") %>" alt="..." class="img-fluid">
                 <% end %>
                 <div class="pitch-name-overlay position-absolute w-100 text-center" style="top: 50%; transform: translateY(-50%);">
                   <h4 class="text-white" style="font-size: 3rem; font-weight: bold;"><%= @pitch.name %></h4>
