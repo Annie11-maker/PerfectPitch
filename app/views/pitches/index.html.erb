@@ -38,8 +38,8 @@
         <div class="col-lg-4 col-sm-6">
           <%= link_to pitch_path(pitch), class: 'portfolio-box' do %>
             <div class="card h-100 position-relative">
-              <% if pitch.id > 1 && pitch.id < 6 %>
-                <img src="<%= asset_path("fullsize/#{pitch.id}.jpg") %>" alt="..." class="img-fluid">
+              <% if pitch.image_url.present? %>
+                <%= image_tag pitch.image_url, alt: pitch.name, class: "img-fluid" %>
               <% else %>
                 <img src="<%= asset_path("fullsize/1.jpg") %>" alt="..." class="img-fluid">
               <% end %>
