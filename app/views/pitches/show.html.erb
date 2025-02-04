@@ -13,7 +13,7 @@
                           background-repeat: no-repeat;
                           min-height: 50vh">
 
-                <h4 class="text-black text-center mb-4" style="font-size: 3rem; font-weight: bold;">
+                <h4 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-4" style="font-size: 3rem; font-weight: bold;">
                   <%= @pitch.name %>
                 </h4>
 
@@ -41,8 +41,8 @@
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
-                <h5 class="text-black text-center mb-3">Pain Points</h5>
-                <ul class="list-unstyled text-black">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">PAIN POINTS</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
                   <%= @pitch.content.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
@@ -58,8 +58,8 @@
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
-                <h5 class="text-black text-center mb-3">Target Audience</h5>
-                <ul class="list-unstyled text-black">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">TARGET AUDIENCE</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
                   <%= @pitch.content.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
@@ -75,8 +75,8 @@
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
-                <h5 class="text-black text-center mb-3">Solution</h5>
-                <ul class="list-unstyled text-black">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">SOLUTION</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
                   <%= @pitch.content.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
@@ -132,7 +132,7 @@
       <% end %>
 
       <%= link_to generate_ppt_pitch_path(@pitch), class: "btn btn-primary me-2" do %>
-        <i class="fas fa-download"></i> Download Presentation
+        <i class="fas fa-download"></i>
       <% end %>
 
 

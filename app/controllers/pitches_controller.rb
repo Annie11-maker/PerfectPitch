@@ -54,24 +54,13 @@ class PitchesController < ApplicationController
 
   def create_ppt(pitch)
     ppt = Powerpoint::Presentation.new
-
-    # Title Slide
     # ppt.add_textual_slide(@pitch.name)
-
-    # Pain Points Slide
     ppt.add_textual_slide("Pain Points", @pitch.content.split("\n")[0..3])
-
-    # Audience Slide
     ppt.add_textual_slide("Target Audience", @pitch.content.split("\n")[4..7])
-
-    # Solution Slide
     ppt.add_textual_slide("Solution", @pitch.content.split("\n")[8..11])
-
-    # Save File
     file_path = Rails.root.join('tmp', "#{@pitch.name.parameterize}.pptx")
     ppt.save(file_path)
 
     file_path
   end
-
 end
