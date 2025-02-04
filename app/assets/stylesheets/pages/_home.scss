@@ -1,10 +1,25 @@
 // Specific CSS for your home-page
 h1 {
   color:#670BFF;
+  align-items: center;
 }
 
 h2 {
   color:#8947f5;
+}
+
+p {
+  color: #000000;
+  font-size: 12px;
+}
+
+label {
+  color: #000000;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .landing-page {
@@ -78,6 +93,15 @@ h2 {
   color: #670BFF;
 }
 
+a {
+  color: #670BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #FFFFFF;
+  color: #A259FF;
+}
 .btn-secondary {
   background-color: white;
   color: #670BFF;
