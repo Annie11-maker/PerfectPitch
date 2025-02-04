@@ -28,9 +28,9 @@
               <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s", class: "avatar", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My Profile", "#", class: "dropdown-item text-black" %>
+              <%= link_to "My Profile", edit_user_registration_path, class: "dropdown-item text-black" %>
               <%= link_to "My Pitches", pitches_path, class: "dropdown-item text-black" %>
-              <%= link_to "My favourites", favourites_path, class: "dropdown-item text-black" %>
+              <%= link_to "My Favourites", favourites_path, class: "dropdown-item text-black" %>
               <%= link_to "About us", "#", class: "dropdown-item text-black" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item text-black" %>
             </div>
