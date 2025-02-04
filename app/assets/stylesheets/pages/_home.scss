@@ -1,12 +1,14 @@
+
 // Specific CSS for your home-page
 h1 {
   color:#670BFF;
   align-items: center;
 }
 
-h2 {
-  color:#8947f5;
+body {
+  font-family: Arial, sans-serif;
 }
+
 
 p {
   color: #000000;
@@ -22,43 +24,40 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: 'Montserrat', sans-serif;
 }
 
+
 .landing-page {
-  // background-image: asset-url("background-image.png");
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+/* Hero Section (Top Half) */
+.hero-section {
+  flex: 1 0 50%; /* Takes the top 50% of the screen */
+  background-color: #670BFF;
+  color: white;
   display: flex;
   justify-content: center;
-  // justify-content: flex-end;
   align-items: center;
-  text-align: right;
-  color: white; /* Ensure text is visible */
-  flex-direction: column;
-
+  padding: 20px;
+  text-align: center;
 }
 
-#services {
-  margin-top: -180px; /* Move it fully up */
-  padding: 20px 0; /* Less padding to shrink section */
+.hero-card {
+  background-color: white;
+  color: #670BFF;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
 }
 
-#services h2 {
-  font-size: 1.5rem; /* Make heading smaller */
+.hero-card h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-#services .fs-1 {
-  font-size: 1.5rem !important; /* Reduce icon size */
-}
-
-#services .h4 {
-  font-size: 1rem; /* Make subheadings smaller */
-}
-
-#services p {
-  font-size: 0.8rem; /* Reduce paragraph text size */
-}
 
 .content {
   padding: 20px;
@@ -69,22 +68,19 @@ h1, h2, h3, h4, h5, h6, p {
   // justify-content: center;
 }
 
-.text-primary {
-  color: #670BFF;
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
+/* Button styles */
 .btn-primary {
   background-color: #670BFF;
   color: white;
-  border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -104,18 +100,92 @@ a:hover {
 .btn-secondary {
   background-color: white;
   color: #670BFF;
-  border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
 }
 
 .btn-secondary:hover {
   background-color: #670BFF;
   color: white;
+}
+
+/* How It Works Section */
+.how-it-works {
+  flex: 1 0 50%; /* Takes the middle 50% of the screen */
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #670BFF;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive 3 cards per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.card i {
+  font-size: 3rem;
+  color: #8947f5;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Why Choose Section */
+.why-choose {
+  flex: 1 0 50%; /* Takes the bottom 50% of the screen */
+  background-color: #670BFF;
+  color: white;
+  padding: 40px 20px;
+}
+
+.why-choose .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive 4 cards per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Additional Styles for the Cards */
+.card.feature-card {
+  background-color: #8947f5;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
