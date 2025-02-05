@@ -95,7 +95,7 @@
       <div class="d-flex justify-content-end">
         <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
-            <%= f.submit "🌟", class: "btn btn-primary me-2" %>
+            <%= f.submit "🤍", class: "btn btn-primary me-2" %>
           <% end %>
         <% else %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
