@@ -1,46 +1,109 @@
-<div class="container mt-5">
-  <h1 class="text-center mb-4">My Favourites</h1>
-
+<div class="container">
+  <h1 class="text-center mb-4" style="font-family: 'Pacifico'">My Favourites💜</h1>
   <% @favourites.each do |favourite| %>
-    <div class="card mb-4">
+    <div class="card-pitch">
       <div id="carousel-<%= favourite.id %>" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
-              <%= image_tag asset_path("fullsize/#{favourite.pitch.id}.jpg"), class: "d-block w-100", alt: "Pitch Image 1" %>
+          <div class="carousel-item active" style="height: 100%;">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100">
+              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+                    style="border-radius: 10px;
+                            background-image: url('<%= favourite.pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{favourite.pitch.template}_title.JPG")) ? asset_path("templates/#{favourite.pitch.template}_title.JPG") : asset_path('templates/bright_modern_title.JPG') %>');
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            min-height: 50vh">
+
+                <h4 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-4" style="font-size: 3rem; font-weight: bold;">
+                <%= favourite.pitch.name %>
+                </h4>
+
+                <div class="text-center">
+                  <% if favourite.pitch.image_url.present? %>
+                    <%= image_tag favourite.pitch.image_url, alt: favourite.pitch.name, class: "img-fluid rounded", style: "max-width: 300px; height: auto;" %>
+                  <% elsif favourite.pitch.photo.attached? %>
+                    <%= cl_image_tag favourite.pitch.photo.key, height: 200, width: 300, crop: :fill, class: "rounded" %>
+                  <% else %>
+                    <img src="<%= asset_path('fullsize/1.jpg') %>" alt="..." class="img-fluid rounded" style="max-width: 300px; height: auto;">
+                  <% end %>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+                  style="border-radius: 10px;
+                          background-image: url('<%= favourite.pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{favourite.pitch.template}_content.JPG")) ? asset_path("templates/#{favourite.pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
+
+                          background-size: cover;
+                          background-position: center;
+                          min-height: 50vh">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">PAIN POINTS</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
+                  <%= favourite.pitch.content.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
-              <p class="text-muted">📷 Image 2</p>
+            <div class="d-flex justify-content-center">
+              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+                  style="border-radius: 10px;
+                          background-image: url('<%= favourite.pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{favourite.pitch.template}_content.JPG")) ? asset_path("templates/#{favourite.pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
+
+                          background-size: cover;
+                          background-position: center;
+                          min-height: 50vh">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">TARGET AUDIENCE</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
+                  <%= favourite.pitch.content.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="bg-light d-flex justify-content-center align-items-center" style="height: 200px;">
-              <p class="text-muted">📷 Image 3</p>
+            <div class="d-flex justify-content-center">
+              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+                  style="border-radius: 10px;
+                          background-image: url('<%= favourite.pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{favourite.pitch.template}_content.JPG")) ? asset_path("templates/#{favourite.pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
+
+                          background-size: cover;
+                          background-position: center;
+                          min-height: 50vh">
+                  <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">SOLUTION</h5>
+                <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
+                  <%= favourite.pitch.content.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel-<%= favourite.id %>" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: 670BFF;"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carousel-<%= favourite.id %>" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: 670BFF;"></span>
           <span class="visually-hidden">Next</span>
         </button>
+        </div>
+      <div class="container mb-5">
+        <div class="card shadow p-2" style="width: 100%;">
+          <h5><strong>Name:</strong><%= favourite.pitch.name %></h5>
+          <p><strong>Description:</strong> <%= favourite.pitch.description %></p>
+          <div class="d-flex justify-content-end">
+            <%= link_to favourite_path(favourite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this from your favourites?" }, class: "btn btn-primary btn-sm" do %>
+              <i class="fas fa-trash-alt"></i>
+              <% end %>
+          </div>
+        </div>
       </div>
-
-      <div class="card-body">
-        <h5 class="card-title text-muted" style="font-size: 0.9rem;"><%= favourite.pitch.name %></h5>
-        <p class="card-text text-muted" style="font-size: 0.8rem;"><strong>Price:</strong> $<%= favourite.pitch.description %></p>
-
-        <%= link_to favourite_path(favourite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this from your favourites?" }, class: "btn btn-primary btn-sm" do %>
-          <i class="fas fa-trash-alt"></i>
-        <% end %>
       </div>
     </div>
   <% end %>

@@ -10,68 +10,8 @@ body {
 }
 
 
-p {
-  color: #000000;
-  font-size: 12px;
-}
-
-label {
-  color: #000000;
-  font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-}
-
-
-.landing-page {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-}
-
-/* Hero Section (Top Half) */
-.hero-section {
-  flex: 1 0 50%; /* Takes the top 50% of the screen */
-  background-color: #670BFF;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.hero-card {
-  background-color: white;
-  color: #670BFF;
-  border-radius: 8px;
-  padding: 30px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.hero-card h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-
-.content {
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 100%;
-  margin-right: 20px; /* Optional: Add space between content and edge of screen */
-  text-align: center;
-  // justify-content: center;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 /* Button styles */
@@ -110,82 +50,7 @@ a:hover {
   color: white;
 }
 
-/* How It Works Section */
-.how-it-works {
-  flex: 1 0 50%; /* Takes the middle 50% of the screen */
-  background-color: #f4f4f4;
-  padding: 40px 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #670BFF;
-  margin-bottom: 40px;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive 3 cards per row */
-  gap: 30px;
-  justify-items: center;
-}
-
-/* Card styles */
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 320px;
-  text-align: center;
-}
-
-.card i {
-  font-size: 3rem;
-  color: #8947f5;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Why Choose Section */
-.why-choose {
-  flex: 1 0 50%; /* Takes the bottom 50% of the screen */
-  background-color: #670BFF;
+.section-text {
   color: white;
-  padding: 40px 20px;
-}
-
-.why-choose .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive 4 cards per row */
-  gap: 30px;
-  justify-items: center;
-}
-
-/* Additional Styles for the Cards */
-.card.feature-card {
-  background-color: #8947f5;
-  color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-card {
-    padding: 20px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
+  font-size: 1.1rem;
 }

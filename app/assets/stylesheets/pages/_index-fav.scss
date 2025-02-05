@@ -1,0 +1,38 @@
+.card-pitch {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-pitch > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-pitch h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-pitch p {
+  font-size: 20px;
+  margin: 0;
+}
+
+
+.card-pitch .card-pitch-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-pitch-infos .card-pitch-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
