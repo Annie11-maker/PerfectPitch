@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "about-us", to: "pages#about-us", as: :about_us
+  get "up_next", to: "pitches#up_next", as: :up_next
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
   resources :pitches do
     member do
       get :generate_ppt
+      get 'up_next'
     end
     resources :reviews, only: [:create]
     resources :favourites, only: [:create]

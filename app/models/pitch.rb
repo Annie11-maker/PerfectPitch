@@ -16,7 +16,7 @@ class Pitch < ApplicationRecord
       ]
     })
     return chatgpt_response["choices"][0]["message"]["content"]
-    #"Pain point 1\nPain point 2\nPain point 3\nPain point 4\nAudience point 1\nAudience point 2\nAudience point 3\nAudience point 4\nSolution point 1\nSolution point 2\nSolution point 3\nSolution point 4"
+    # "Pain point 1\nPain point 2\nPain point 3\nPain point 4\nAudience point 1\nAudience point 2\nAudience point 3\nAudience point 4\nSolution point 1\nSolution point 2\nSolution point 3\nSolution point 4"
 
   end
 
