@@ -1,14 +1,22 @@
 
 // Specific CSS for your home-page
+
 h1 {
   color:#670BFF;
   align-items: center;
+  font-weight: bolder;
+  font-size: 64px;
 }
 
 body {
   font-family: Arial, sans-serif;
 }
 
+h2 {
+  color: #A259FF;
+  font-weight: bold;
+  font-size: 48px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -34,7 +42,7 @@ a {
 }
 
 a:hover {
-  background-color: #FFFFFF;
+  background-color:#A259FF;
   color: #A259FF;
 }
 .btn-secondary {
@@ -53,4 +61,16 @@ a:hover {
 .section-text {
   color: white;
   font-size: 1.1rem;
+}
+
+.ellipse-bg {
+  background: radial-gradient(circle, #670BFF 40%, rgba(106, 78, 35, 0) 100%);
+  // background: #A259FF;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: all 0.5s ease;
 }

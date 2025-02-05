@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5" style="width: 50%; justify-content: center; align-items: center">
   <h1>Create a New Pitch</h1>
     <%= simple_form_for @pitch do |f| %>
         <%= f.input :name, label: "Pitch Name", input_html: { class: "form-control" } %>
@@ -9,8 +9,9 @@
 
         <%= f.label :template, "Choose a Template" %>
         <%= f.select :template, options_for_select(["bright_modern", "dark_modern","focus", "geometric", "marina", "momentum", "shift"]), {}, class: "form-select" %>
-
-        <%= f.submit "Create Pitch", class: "btn btn-primary" %>
-        <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-secondary" %>
+        <div class="buttons mt-5">
+          <%= f.submit "Create Pitch", class: "btn btn-primary" %>
+          <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-secondary" %>
+        </div>
     <% end %>
 </div>
