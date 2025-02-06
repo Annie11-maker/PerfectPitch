@@ -18,7 +18,7 @@
                 <% if resource.photo.attached? %>
                     <%= image_tag resource.photo.variant(resize: "150x150"), class: "img-thumbnail" %>
                 <% else %>
-                    <%= image_tag "logo-LeW.png", class: "img-thumbnail" %>
+                    <%= image_tag "default-avatar.png", class: "img-thumbnail" %>
                 <% end %>
             </div>
 
