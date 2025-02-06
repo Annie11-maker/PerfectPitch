@@ -3,36 +3,30 @@
 
 <section id="portfolio" class="page-section py-4">
   <div class="container">
-    <div data-controller="loading-spinner" data-action="click->loading-spinner#show">
-      <div id="spinner" data-loading-spinner-target="spinner" style="display: none;">
-        <img src="<%= asset_path('pitchwait.gif') %>" alt="Loading..." />
-      </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <% @pitches.each do |pitch| %>
+        <div class="col">
+          <%= link_to pitch_path(pitch), class: 'portfolio-box' do %>
+            <div class="card shadow-lg border-0 rounded-3 overflow-hidden custom-card">
+              <% if pitch.image_url.present? %>
+                <%= image_tag pitch.image_url, alt: pitch.name, class: "img-fluid w-100 h-100 object-cover" %>
+              <% elsif pitch.photo.attached? %>
+                <%= cl_image_tag pitch.photo.key, crop: :fill, class: "img-fluid w-100 h-100 object-cover" %>
+              <% else %>
+                <img src="<%= asset_path('fullsize/1.jpg') %>" alt="..." class="img-fluid w-100 h-100 object-cover">
+              <% end %>
+              <div class="card-img-overlay d-flex justify-content-center align-items-center text-center text-white p-0">
+                <div class="project-name w-100">
+                  <h5 class="text-shadow mb-0 ellipse-bg"><%= pitch.name %></h5>
 
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <% @pitches.each do |pitch| %>
-          <div class="col">
-            <%= link_to pitch_path(pitch), class: 'portfolio-box' do %>
-              <div class="card shadow-lg border-0 rounded-3 overflow-hidden custom-card h-100">
-                <% if pitch.image_url.present? %>
-                  <%= image_tag pitch.image_url, alt: pitch.name, class: "img-fluid w-100 h-100 object-cover" %>
-                <% elsif pitch.photo.attached? %>
-                  <%= cl_image_tag pitch.photo.key, crop: :fill, class: "img-fluid w-100 h-100 object-cover" %>
-                <% else %>
-                  <img src="<%= asset_path('fullsize/1.jpg') %>" alt="..." class="img-fluid w-100 h-100 object-cover">
-                <% end %>
-                <div class="card-img-overlay d-flex justify-content-center align-items-center text-center text-white p-0">
-                  <div class="project-name w-100">
-                    <h5 class="text-shadow mb-0 ellipse-bg"><%= pitch.name %></h5>
-
-                  </div>
                 </div>
               </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
-  </div> </div>
+  </div>
 </section>
 
 
