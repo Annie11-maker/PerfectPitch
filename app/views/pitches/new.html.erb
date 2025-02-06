@@ -9,7 +9,11 @@
 
         <%= f.label :template, "Choose a Template" %>
         <%= f.select :template, options_for_select(["bright_modern", "dark_modern","focus", "geometric", "marina", "momentum", "shift"]), {}, class: "form-select" %>
-        <div class="buttons mt-5">
+
+        <div data-controller="loading-spinner" data-action="click->loading-spinner#show" class="buttons mt-5">
+          <div id="spinner" data-loading-spinner-target="spinner" style="display: none;">
+            <img src="<%= asset_path('waiting.gif') %>" alt="Loading..." />
+          </div>
           <%= f.submit "Create Pitch", class: "btn btn-primary" %>
           <%= link_to 'Back to Pitches', pitches_path, class: "btn btn-secondary" %>
         </div>
