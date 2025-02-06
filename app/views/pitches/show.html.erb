@@ -85,11 +85,11 @@
       <div class="d-flex justify-content-end">
         <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
-            <%= f.submit ":white_heart:", class: "btn btn-primary me-2" %>
+            <%= f.submit "🤍", class: "btn btn-primary me-2" %>
           <% end %>
         <% else %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
-            <%= f.submit ":star:", class: "btn btn-primary me-2", disabled: @favourite.present? %>
+            <%= f.submit "♥️", class: "btn btn-primary me-2", disabled: @favourite.present? %>
               <% end %>
             <% end %>
           <%= link_to "#", class: "btn btn-primary me-2", id: "copy-link" do %>
@@ -127,13 +127,13 @@
     </div>
   </div>
   <div class="container mt-4">
-    <h2 class="text-primary">Reviews</h2>
+    <h2>Reviews</h2>
     <% if @pitch.reviews.any? %>
       <div class="list-group" style="max-width: 800px;">
         <% @pitch.reviews.each do |review| %>
           <div class="list-group-item">
-            <p><strong>:star: Rating:</strong> <%= review.rating %> / 5</p>
-            <p><strong>:speech_bubble: Comment:</strong> <%= review.comment %></p>
+            <p><strong>⭐️ Rating:</strong> <%= review.rating %> / 5</p>
+            <p><strong> 💬 Comment:</strong> <%= review.comment %></p>
           </div>
         <% end %>
       </div>
