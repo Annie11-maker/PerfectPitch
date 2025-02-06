@@ -2,35 +2,12 @@
 <html>
 <head>
   <title>404 Not Found</title>
-  <style>
-    body {
-      text-align: center;
-      padding: 50px;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      font-size: 50px;
-      color: darkred;
-    }
-    p {
-      font-size: 20px;
-      color: #333;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-      font-size: 18px;
-      display: inline-block;
-      margin-top: 10px;
-      border: 1px solid #3498db;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-  </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Oops! The page you are looking for was not found.</p>
-  <a href="<%= root_path %>">Go to Homepage</a>
+  <div class="page-404" style= "min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1>404</h1>
+    <p>Oops! The page you are looking for was not found.</p>
+    <a href="<%= root_path %>">Go to Homepage</a>
+  </div>
 </body>
 </html>
