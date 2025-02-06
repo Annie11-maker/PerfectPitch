@@ -44,7 +44,7 @@
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">PAIN POINTS</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= favourite.pitch.content.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= favourite.pitch.pain_points.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
@@ -61,7 +61,7 @@
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">TARGET AUDIENCE</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= favourite.pitch.content.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= favourite.pitch.target_audience.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
@@ -78,7 +78,7 @@
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">SOLUTION</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(favourite.pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= favourite.pitch.content.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= favourite.pitch.solution.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
