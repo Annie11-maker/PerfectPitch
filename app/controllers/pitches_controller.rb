@@ -23,6 +23,15 @@ class PitchesController < ApplicationController
     @review = Review.new
     @favourite = Favourite.new
     @favourites = Favourite.all
+    unless @pitch.pain_points.present?
+      @pitch.update(pain_points: @pitch.content)
+    end
+    unless @pitch.target_audience.present?
+      @pitch.update(target_audience: @pitch.content)
+    end
+    unless @pitch.solution.present?
+      @pitch.update(solution: @pitch.content)
+    end
   end
 
   def edit
