@@ -74,3 +74,50 @@ a:hover {
   display: inline-block;
   transition: all 0.5s ease;
 }
+
+// .arrow {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.landing-page, .how-it-works{
+  position: relative;
+}
+
+.scroll-down-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down-arrow {
+  cursor: pointer;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 80px solid #623CEA; /* Le Wagon Purple */
+  animation: glow 1.5s infinite alternate ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(98, 60, 234, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(98, 60, 234, 1));
+  }
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
