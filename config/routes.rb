@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "about-us", to: "pages#about-us", as: :about_us
   get "up_next", to: "pitches#up_next", as: :up_next
+  get "privacy-policy", to: "pages#privacy-policy", as: :privacy_policy
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -12,11 +12,9 @@
                           background-position: center;
                           background-repeat: no-repeat;
                           min-height: 50vh">
-
                 <h4 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-4" style="font-size: 3rem; font-weight: bold;">
                   <%= @pitch.name %>
                 </h4>
-
                 <div class="text-center">
                   <% if @pitch.image_url.present? %>
                     <%= image_tag @pitch.image_url, alt: @pitch.name, class: "img-fluid rounded", style: "max-width: 300px; height: auto;" %>
@@ -29,58 +27,51 @@
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
               <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
                   style="border-radius: 10px;
                           background-image: url('<%= @pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{@pitch.template}_content.JPG")) ? asset_path("templates/#{@pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
-
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">PAIN POINTS</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= @pitch.content.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= @pitch.pain_points.split("\n")[0..3].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
               <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
                   style="border-radius: 10px;
                           background-image: url('<%= @pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{@pitch.template}_content.JPG")) ? asset_path("templates/#{@pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
-
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">TARGET AUDIENCE</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= @pitch.content.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= @pitch.target_audience.split("\n")[4..7].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
           </div>
-
           <div class="carousel-item">
             <div class="d-flex justify-content-center">
               <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
                   style="border-radius: 10px;
                           background-image: url('<%= @pitch.template.present? && File.exist?(Rails.root.join('app/assets/images/templates', "#{@pitch.template}_content.JPG")) ? asset_path("templates/#{@pitch.template}_content.JPG") : asset_path('templates/bright_modern_content.JPG') %>');
-
                           background-size: cover;
                           background-position: center;
                           min-height: 50vh">
                   <h5 class="<%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %> text-center mb-3">SOLUTION</h5>
                 <ul class="list-unstyled <%= ['dark_modern', 'focus', 'marina'].include?(@pitch.template) ? 'text-white' : 'text-black' %>">
-                  <%= @pitch.content.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
+                  <%= @pitch.solution.split("\n")[8..11].map { |point| "<li>#{point.strip}</li>" }.join.html_safe %>
                 </ul>
               </div>
             </div>
           </div>
-
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#pitchImagesCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: #670BFF;"></span>
@@ -91,26 +82,22 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
       <div class="d-flex justify-content-end">
         <% if current_user.favourites.find_by(pitch: @pitch).nil? %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
-            <%= f.submit "🤍", class: "btn btn-primary me-2" %>
+            <%= f.submit ":white_heart:", class: "btn btn-primary me-2" %>
           <% end %>
         <% else %>
           <%= simple_form_for [@pitch, @favourite] do |f| %>
-            <%= f.submit "⭐", class: "btn btn-primary me-2", disabled: @favourite.present? %>
+            <%= f.submit ":star:", class: "btn btn-primary me-2", disabled: @favourite.present? %>
               <% end %>
             <% end %>
-
           <%= link_to "#", class: "btn btn-primary me-2", id: "copy-link" do %>
             <i class="fas fa-copy"></i>
           <% end %>
-
           <%= link_to generate_ppt_pitch_path(@pitch), class: "btn btn-primary me-2" do %>
             <i class="fas fa-download"></i>
           <% end %>
-
           <% if @pitch.user == current_user %>
             <%= link_to pitch_path(@pitch), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-primary" do %>
               <i class="fas fa-trash-alt"></i>
@@ -118,7 +105,6 @@
           <% end %>
       </div>
     </div>
-
     <div class="col-md-4">
       <div class="card p-4 shadow-sm h-100">
         <h3 class="text-black">Add a Review</h3>
@@ -134,22 +120,20 @@
       </div>
     </div>
   </div>
-
   <div class="container mt-2 mb-5">
     <div class="card-show shadow p-4" style="width: 100%;">
       <h5><strong>Name: </strong><%= @pitch.name %></h5>
       <h5><strong>Description:</strong> <%= @pitch.description %></h5>
     </div>
   </div>
-
   <div class="container mt-4">
     <h2 class="text-primary">Reviews</h2>
     <% if @pitch.reviews.any? %>
       <div class="list-group" style="max-width: 800px;">
         <% @pitch.reviews.each do |review| %>
           <div class="list-group-item">
-            <p><strong>⭐ Rating:</strong> <%= review.rating %> / 5</p>
-            <p><strong>💬 Comment:</strong> <%= review.comment %></p>
+            <p><strong>:star: Rating:</strong> <%= review.rating %> / 5</p>
+            <p><strong>:speech_bubble: Comment:</strong> <%= review.comment %></p>
           </div>
         <% end %>
       </div>
@@ -158,3 +142,4 @@
     <% end %>
   </div>
 </div>
+
