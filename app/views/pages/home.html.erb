@@ -4,21 +4,35 @@
     <meta property="og:title" content="Perfect Pitch - Your Business Idea, Perfectly Pitched">
     <meta property="og:image" content="facebook-card.jpg">
     <meta property="og:description" content="Perfect Pitch is a Le Wagone Alumnus Capstone Project. It is by design an opensource project for Le Wagon Bootcamp Alumni to continue their journey and practice their coding skills.">
-    <meta property="og:site_name" content="Perfect Pitch"/>
-    <meta name="facebook-domain-verification" content="xkvkqa13bc155z19l17cihfl46winw" /
+    <meta property="og:site_name" content="Perfect Pitch">
+    <meta name="facebook-domain-verification" content="xkvkqa13bc155z19l17cihfl46winw">
   </head>
-  <body>
-    <div class="landing-page" style="background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(<%= asset_path 'background-image.png' %>); background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
-      <div class="content">
-        <h1>YOUR BUSINESS IDEA, PERFECTLY PITCHED</h1>
-        <h2 style="color: #A259FF;">Turn Your Vision Into A Winning Pitch - Instantly</h2>
-        <div class="d-flex justify-content-center gap-3 mt-4">
-          <%= link_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
-          <%= link_to "Explore Public Pitches", pitches_path, class: "btn btn-secondary" %>
-        </div>
+ <body>
+
+  <div class="landing-page" style="background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url(<%= asset_path 'background-image.png' %>); background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+    <div class="content">
+      <h1>Your Business Idea, Perfectly Pitched</h1>
+      <h2 style="color: #A259FF;">Turn Your Vision Into A Winning Pitch - Instantly</h2>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <%= link_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
+        <%= link_to "Explore Public Pitches", pitches_path, class: "btn btn-secondary" %>
       </div>
-    <%= render "shared/scroll_arrow" %>
     </div>
+  <%= render "shared/scroll_arrow" %>
+  </div>
+
+  <div class="how-it-works text-center" style="color: #670BFF; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h2 class="section-title" style="margin-bottom: 30px;">How It Works</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-4 step-card d-flex flex-column align-items-center">
+        <i class="bi-pencil-square fs-1" style="color: #670BFF;"></i>
+        <div style="background-color: #A259FF; color: white; padding: 20px; border-radius: 8px; width: 80%; height: 185px;">
+          <h3>Step 1: Enter Your Idea</h3>
+          <p class="section-text">Simply input your business concept in a few words.</p>
+
+        </div>
+      <%= render "shared/scroll_arrow" %>
+      </div>
 
     <div class="how-it-works text-center" style="color: #670BFF; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <h2 class="section-title" style="margin-bottom: 30px;">How It Works</h2>
@@ -82,5 +96,5 @@
         <%= link_to "Generate Pitch", new_pitch_path, class: "btn btn-primary" %>
       </div>
     </section>
-  </body>
+   </body>
 </html>

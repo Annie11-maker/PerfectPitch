@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'errors/not_found'
   get 'reviews/create'
   devise_for :users
   root to: "pages#home"
   get "about-us", to: "pages#about-us", as: :about_us
   get "up_next", to: "pitches#up_next", as: :up_next
   get "privacy-policy", to: "pages#privacy-policy", as: :privacy_policy
+  match "/404", to: "errors#not_found", via: :all
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
