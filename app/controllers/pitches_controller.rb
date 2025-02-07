@@ -20,6 +20,10 @@ class PitchesController < ApplicationController
   end
 
   def show
+    if !current_user
+      redirect_to pitches_path
+      return
+    end
     @review = Review.new
     @favourite = Favourite.new
     @favourites = Favourite.all
