@@ -4,19 +4,15 @@
 
 **We Are Team Pitch Perfect**
 
-![Screenshot 2025-02-03 at 05 16 00](https://github.com/user-attachments/assets/48c400f2-3422-46d9-83f3-32a1fb8dc9ac)
-
-
 **********************************************************************************************************************************************************************************************
 **Shared Values**
 
 1. Respect      :  For Peers, Teachers & Self
 2. Integrity    :  Do The Right Thing, Even When No One Is Watching
-3. Loyalty      :  To Team & Team Members - It Reflects On You
-3. Loyalty      :  To Project Mission & Team Members - It Reflects On You
+3. Loyalty      :  To Project Mission
 4. Commitment   :  Give Your Best
 5. Empower      :  Help Each Other to Learn, Grow & Develop
-6. Inculpable   : Experimenting and engaging without blame culture under the pretext of feedback
+6. Inculpable   : Experimenting and engaging without blame
 
 **********************************************************************************************************************************************************************************************
 
@@ -50,27 +46,20 @@
 
 **Project Rota**
 
-![image](https://github.com/user-attachments/assets/7000fa26-4f8b-4c51-8b9f-a954afda89b4)
+TBC
 
 **********************************************************************************************************************************************************************************************
 
 **Project Programme**
 
-![Screenshot 2025-02-03 at 06 09 56](https://github.com/user-attachments/assets/d89191df-26ba-41da-ba33-5b5e9d266070)
+TBC
 
-![Screenshot 2025-02-03 at 06 10 18](https://github.com/user-attachments/assets/72a95d40-6b1f-439a-b10b-09f95535b1ea)
-
-![Screenshot 2025-02-03 at 06 11 10](https://github.com/user-attachments/assets/6ea9d461-e2c5-48e2-a68f-60cf5b88dda9)
-
-
-As at 03 Feb 2025
 **********************************************************************************************************************************************************************************************
 
 **Task Work Flow**
 
-![Screenshot 2025-01-26 at 19 53 37](https://github.com/user-attachments/assets/28a79444-4d8e-4f7a-be15-4282fc6594f8)
+TBC
 
-As at 03 Feb 2025
 **********************************************************************************************************************************************************************************************
 
 ### **MISSION STATEMENT**
@@ -95,19 +84,19 @@ It is **not** intended to be a finished product but one that is left to the comm
 ** PLEASE NOTE: The below instructions are mandatory for the duration of the project. Any delays will result in Critical Path Delays. **
 **********************************************************************************************************************************************************************************************
 
-### **Batch 1900 Team PITCH PERFECT - S.M.A.R.T GOAL**
+### ** Team PITCH PERFECT - S.M.A.R.T GOAL**
 
 **********************************************************************************************************************************************************************************************
 
-1. Specific: Deliver a Minimum Viable Product as per scope.
+1. Specific: Contribute and develop the main effort.
 
 2. Measurable: Users must be able to achieve the desired objectives identified.
 
-3. Achievable: Yes - Timeframes, TA Support, Team Skills, Knowledge, and Experience make it feasible. No major concerns were noted.
+3. Achievable: Yes - All alumni are qualified full-stack developers.
 
-4. Realistic: Yes - Team Pitch Perfect is capable of delivering this objective as demonstrated by the Air BnB Project.
+4. Realistic: Yes - Tasks are broken down into small challenges.
 
-5. Timeframe: 2 Weeks
+5. Timeframe: Ongoing
 
 **********************************************************************************************************************************************************************************************
 
