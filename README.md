@@ -18,29 +18,9 @@
 
 **Daily Standups**
 
-1. Standup meetings are held at the beginning of each day with a TA
-2. The whole team and assigned TA should take part
-3. Notes of the meeting should be recorded clearly in the project Slack channel
-4. Ensure the Kanban Board is up to date
-5. Get the latest version of your master to discuss the current state of your app
-2. The whole team and assigned TA must take part
-3. Task Reports completed beforehand
-4. Departing PM to ensure the Kanban Board is up to date
-5. Get the latest version of Master to discuss the current state of your app
-6. Notify TA when Ready - ** ETA 15-20 Mins post Daily Lectures / NLT 30mins **
-
 **********************************************************************************************************************************************************************************************
 
-**Standup Instructions - PM of THE DAY**
-
-** Project Lead / Daily Lead to be prepared to brief TA on Daily Plan **
-
-1. Share your screen with the Kanban board & App opened
-2. Previous day’s recap: round table with everyone’s actual completed tasks
-3. Today’s program: round table for which features/page you will work on today
-4. Address every technical concern or difficulty - ** List of Technical issues to be collated the day before **
-5. Share your general state of mind, concerns, or ideas. ** Communication is key! **
-6. Discuss all together with the TA every change to user stories (+ / -)
+Standup Instructions
 
 **********************************************************************************************************************************************************************************************
 
@@ -150,36 +130,4 @@ Production Best Practice
 
 **********************************************************************************************************************************************************************************************
 
-01. Follow the instructions
-02. Adhere to the Values
-03. Stick to the working hours 9 am - 6 pm
-04. Overtime must be approved by PM with justification in the Slack channel
-05. Refer to Read Me page, Work Schedules, Programme & Process Flow
-06. Follow the Communication Plan
-07. Figma & Design Led Development can make a world of a difference in our team’s result
-08. Know exactly what each feature should look like
-09. Maintain a consistent design pattern
-10. Familiarise yourself with the information & resources
-11. Stick to the agreed plan and keep the project mission, goals and objective in mind
-12. Update the Slack channel with progress as soon as you complete the activity
-13. Familiarise yourself with the working process flow
-14. Understand the objectives, features, and dependencies
-15. Take some time to review the mockup and think about the functionality and routes
-16. Be proactive in identifying blockers and highlight them immediately
-17. Pair Programming will be adopted as allocated for specific issues
-18. At some point, Be prepared to handle and take sole responsibility for tasks/issues
-19. The instructions are provided to help you navigate through these seamlessly
-20. Handover must be prepared by Off Going Role Holder
-21. Handover must be completed before Daily Standup
-22. In Coming Role Holder to brief TA on the Daily Standup
-23. Departing Role Holder to maintain contingency responsibility
-24. Communicate any absences in advance / before 0900 hrs daily in the Slack channel
-25. Please respect Teachers by attending all Lectures and being visibly present on Camera
-26. Please respect all Peers by attending and encouraging their presentations visibly on camera
-27. Please do not code during lectures/presentations
-28. Enjoy the experience of the Bootcamp
-29. **If In Doubt** ask the **Task/Role Lead**
-30. When tasks are completed progress the status of issues to close out
-31. Finally, focus on time management and seek help early
-
-Thank you for your support and patience. Good luck and may the best Team win.
+Thank you for your support and patience.
