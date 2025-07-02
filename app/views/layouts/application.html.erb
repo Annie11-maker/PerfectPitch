@@ -10,26 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<style>
-
-</style>
-
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <%= render "shared/navbar" %>
     </header>
-    <%= yield %>
 
+    <main class="flex-grow-1">
+      <%= yield %>
+    </main>
 
+    <footer>
+      <%= render "shared/footer" %>
+    </footer>
 
     <script>
-
-  function scrollDown() {
+      function scrollDown() {
         window.scrollBy({
-          top: window.innerHeight * 1.1, // Scrolls down 80% of the viewport height
+          top: window.innerHeight * 1.1,
           behavior: "smooth"
         });
       }
@@ -43,8 +42,5 @@
         });
       });
     </script>
-    <footer>
-      <%= render "shared/footer" %>
-    </footer>
   </body>
 </html>
