@@ -8,6 +8,11 @@
 
       <div class="form-inputs mb-3">
         <div class="mb-3">
+          <%= f.input :user_name, required: true %>
+          <%= f.input :first_name, required: true %>
+          <%= f.input :last_name, required: true %>
+        </div>
+        <div class="mb-3">
           <%= f.input :email,
                       required: true,
                       autofocus: true,
